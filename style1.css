@@ -1,0 +1,122 @@
+body
+{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	cursor: url("aim5_1_.cur"),crosshair;
+    overflow: hidden;
+	
+}
+body:before
+{
+	content: '';
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: url("sky.jpg");
+	background-size: cover;
+
+}
+
+
+/*#container{
+	height: 100%;
+	width: 100%;
+	animation: bg-change 5s infinite;
+
+}*/
+.bird1{
+	position: relative;
+}  
+
+
+
+
+#bird{
+	left: 100%;
+	animation: fly 10s infinite;
+}
+
+
+
+
+
+@keyframes fly{
+	0%{
+		left: 100%;
+		top: 5px%;
+
+	}
+	25%{
+
+		top: 80px;
+	}
+	50%{
+		top: 80px;
+	}
+	75%{
+		top: 25px;
+	}
+	100%{
+		left: -120px;
+		top: 102px;
+	}
+}
+
+.duck:nth-last-of-type(1):
+{
+	animation: fly 10s linear 1s infinite;
+	cursor:url(aim5_1_.cur), text;
+}
+.duck:nth-last-of-type(2):
+{
+	animation: fly 20s linear 2s infinite;
+	cursor:url(aim5_1_.cur), text;
+}
+.duck:nth-last-of-type(3):
+{
+	animation: fly 30s linear 3s infinite;
+	cursor:url(aim5_1_.cur), text;
+}
+.duck:nth-last-of-type(4):
+{
+	animation: fly 40s linear 4s infinite;
+	cursor:url(aim5_1_.cur), text;
+}
+.duck:nth-last-of-type(5):
+{
+	animation: fly 50s linear 5s infinite;
+	cursor:url(aim5_1_.cur), text;
+}
+.score
+{
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	background-color: #dadada;
+	width: 100%;
+	z-index: 2;
+	text-align: center;
+	font-size: 30px;
+}
+.score:after
+{
+	content: counter(score) ;
+	display: inline-block;
+}
+.score:before
+{
+	content: 'Score :' ;
+	display: inline-block;
+	margin-right: 10px;
+}
+input : checked
+{
+	counter-increment: score;
+}
